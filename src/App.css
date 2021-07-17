@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    /*animation: App-logo-spin infinite 20s linear;*/
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.avatar {
+  width: 3rem !important;
+  min-width: 3rem !important;
+  max-width: 3rem !important;
+  min-height: 3rem !important;
+}
+
+.avatar-sm {
+  width: 1.5rem !important;
+  min-width: 1.5rem !important;
+  max-width: 1.5rem !important;
+  min-height: 1.5rem !important;
+}
+
+.avatar-lg {
+  width: 4rem !important;
+  min-width: 4rem !important;
+  max-width: 4rem !important;
+  min-height: 4rem !important;
+}
+
+.avatar-no-min-width {
+  width: auto !important;
+  min-width: auto !important;
+}
+
+.table-responsive {
+  display: block;
+  overflow-x: scroll;
+}
+
+@media (max-width: 575px) {
+  .react-bs-table-no-data {
+    text-align: left !important;
+  }
+
+  .react-bs-table-no-data .justify-content-center {
+    justify-content: start !important;
+  }
+}
+
+.react-bs-table-no-data {
+  text-align: center;
+  padding: 2rem 1rem !important;
+}
+
+.slick-dots {
+  bottom: 0 !important;
+  line-height: .75rem;
+  position: relative !important;
+}
+
+.slick-dots li {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin: 0 !important;
+}
+
+.slick-dots li button {
+  width: 1rem !important;
+  height: 1rem !important;
+  padding: 0 !important;
+}
+
+.slick-dots li button:before {
+  width: 1rem !important;
+  height: 1rem !important;
+  font-size: .75rem !important;
+  color: rgba(0,0,0,.5) !important;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: rgba(11,94,215,.5) !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0b5ed7 !important;
+}
