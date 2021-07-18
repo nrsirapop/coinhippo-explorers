@@ -1,4 +1,9 @@
 # CoinHippo - Explorers
+The CoinHippo Explorers is a multi-network blockchain explorer. Users can scan their wallets through CoinHippo Explorers by using their wallet addresses. The information output consists of the address's balances, NFT assets, a list of the transaction, and each transaction information.
+
+The platform functionalities are supported on multiple networks, including Eth (mainnet & kovan), Matic (mainnet & mumbai), Avalanche (mainnet & testnet), BSC (mainnet & testnet), Moonbeam (Moonbase-alpha & Moonriver), RSK(mainnet & testnet), Arbitrum (mainnet & testnet), Fantom (mainnet & testnet), Palm(mainnet & testnet), and Covalent (internal network v1).
+
+CoinHippo Explorers is an open-source project and can be used by everyone.
 
 ## Explorers URL
 [https://explorers.coinhippo.io](https://explorers.coinhippo.io)
