@@ -1,16 +1,16 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { CHAINS_DATA, CHAIN_SELECTED } from '../../redux/types';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, Media, Form, FormGroup, Input, Button } from 'reactstrap';
-import { CHAIN_SELECTED } from '../../redux/types';
 import _ from 'lodash';
 
 // header component
 const Header = props => {
   // chains data from redux
-  const chainsData = useSelector(content => content.data.chains_data);
+  const chainsData = useSelector(content => content.data[CHAINS_DATA]);
   // chain from redux
-  const chainSelected = useSelector(content => content.preferences.chain_selected);
+  const chainSelected = useSelector(content => content.preferences[CHAIN_SELECTED]);
   const dispatch = useDispatch();
 
   // path to redirect

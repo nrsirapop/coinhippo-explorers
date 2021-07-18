@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { CHAINS_DATA, CHAIN_SELECTED } from '../../redux/types';
 import { Media, Form, FormGroup, Label, Input, FormText, Button } from 'reactstrap';
 import _ from 'lodash';
 
 // chain component
 const Chain = props => {
   // chains data from redux
-  const chainsData = useSelector(content => content.data.chains_data);
+  const chainsData = useSelector(content => content.data[CHAINS_DATA]);
   // chain from redux
-  const chainSelected = useSelector(content => content.preferences.chain_selected) || (props.match && props.match.params && props.match.params.chain_name);
+  const chainSelected = useSelector(content => content.preferences[CHAIN_SELECTED]) || (props.match && props.match.params && props.match.params.chain_name);
 
   // chain data
   const chainData = chainSelected && chainsData && chainsData[chainsData.findIndex(chainData => chainData.name === chainSelected)];

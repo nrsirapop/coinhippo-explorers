@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { CHAINS_DATA, CHAIN_SELECTED } from '../../redux/types';
 import { request as covalentRequest } from '../../api/covalent';
 import { Row, Col, Jumbotron, UncontrolledTooltip, Button, Nav, NavItem, Card, CardBody, CardTitle, CardText } from 'reactstrap';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
@@ -21,9 +22,9 @@ import Loader from 'react-loader-spinner';
 // address component
 const Address = props => {
   // chains data from redux
-  const chainsData = useSelector(content => content.data.chains_data);
+  const chainsData = useSelector(content => content.data[CHAINS_DATA]);
   // chain from redux
-  const chainSelected = useSelector(content => content.preferences.chain_selected) || (props.match && props.match.params && props.match.params.chain_name);
+  const chainSelected = useSelector(content => content.preferences[CHAIN_SELECTED]) || (props.match && props.match.params && props.match.params.chain_name);
   // address query string parameter
   const address = props.match && props.match.params && props.match.params.address;
   // asset type selected query string parameter
